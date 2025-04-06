@@ -5,9 +5,10 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableMap
 import os
 
-api_key = "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"  # Ou substitua diretamente pela chave
+import os
+api_key = os.environ.get("OPENAI_API_KEY")  
 
-llm = OpenAI(temperature=0.7)
+llm = OpenAI(temperature=0.7, api_key=api_key)
 
 # Prompts
 step_one = ChatPromptTemplate.from_template("Translate the following resume to English:\n\n{Resume}") | llm | StrOutputParser()
