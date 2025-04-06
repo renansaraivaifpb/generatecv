@@ -8,7 +8,11 @@ import os
 api_key = os.environ.get("OPENAI_API_KEY")  
 
 try:
-    llm = ChatOpenAI(openai_api_key=api_key, temperature=0.7)
+    llm = ChatOpenAI(
+        model="gpt-3.5-turbo-instruct",
+        temperature=0.7,
+        api_key=api_key
+    )
 except Exception as e:
     print("Erro ao inicializar ChatOpenAI:", e)
     raise
