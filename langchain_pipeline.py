@@ -9,7 +9,7 @@ api_key = os.environ.get("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("A variável OPENAI_API_KEY não está definida!")
 
-llm = OpenAI(temperature=0.7, api_key)
+llm = OpenAI(temperature=0.7, api_key = api_key)
 
 # Prompts
 step_one = ChatPromptTemplate.from_template("Translate the following resume to English:\n\n{Resume}") | llm | StrOutputParser()
