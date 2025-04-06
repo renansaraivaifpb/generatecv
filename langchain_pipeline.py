@@ -7,7 +7,11 @@ import os
 
 api_key = os.environ.get("OPENAI_API_KEY")  
 
-llm = ChatOpenAI(openai_api_key=api_key, temperature=0.7)
+try:
+    llm = ChatOpenAI(openai_api_key=api_key, temperature=0.7)
+except Exception as e:
+    print("Erro ao inicializar ChatOpenAI:", e)
+    raise
 
 # Prompts
 step_one = ChatPromptTemplate.from_template("Translate the following resume to English:\n\n{Resume}") | llm | StrOutputParser()
