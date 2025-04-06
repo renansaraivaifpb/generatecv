@@ -7,7 +7,10 @@ langchain-core==0.1.33
 langchain-openai==0.0.8
 
 # Cliente OpenAI compatível com langchain-openai
-openai==1.11.1
+openai==1.16.2
+
+
 
 # Outras dependências
 tiktoken
+pydantic==1.10.10
