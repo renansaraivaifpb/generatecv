@@ -1,4 +1,4 @@
-Flask
+Flask==2.3.3
 gunicorn
 
 # LangChain e dependências compatíveis
@@ -9,8 +9,6 @@ langchain-openai==0.0.8
 # Cliente OpenAI compatível com langchain-openai
 openai==1.10.0
 
-
-
 # Outras dependências
-tiktoken
+tiktoken==0.5.1
 pydantic==1.10.10
