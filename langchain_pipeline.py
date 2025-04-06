@@ -8,7 +8,7 @@ import os
 import os
 api_key = os.environ.get("OPENAI_API_KEY")  
 
-llm = OpenAI(temperature=0.7, api_key=api_key)
+llm = OpenAI(temperature=0.7)
 
 # Prompts
 step_one = ChatPromptTemplate.from_template("Translate the following resume to English:\n\n{Resume}") | llm | StrOutputParser()
