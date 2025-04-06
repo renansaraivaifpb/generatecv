@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renan S - Gerador de Curriculo</title>
+    <title>Gerador de Curriculo - </title>
     <style>
         * {
             box-sizing: border-box;
@@ -155,16 +155,15 @@
 <body>
     <div class="app-description">
         <h1>Uso de Langchain: integração a LLMs</h1>
-        <p>O estudo da integração à grande modelos naturais tem me atraido a atenção, pois é possível fazer diversas aplicações.</p><br>
-        <p>Nesse sentido, tenho aprimorado alguns conhecimentos básicos de NPL e a utilização da framework (langchain) que permite conectar a diversas funcionalidades.</p><br>
-        <p>Nas leituras que fiz, aprendi algumas arquiteturas interessantes como RAG e cadeias sequências, roteadores e afins.</p><br>
-        <p>Na implementação abaixo, desenvolvi uma cadeia sequencial que foi construida com promptTemplate.
-            A execução da lógica é feita por uma RunnableSequence composta por vários RunnableMap, que passam os dados de uma etapa à outra de forma funcional;
-        </p><br>
-        <p>Em outras palavras, inicialmente, define-se um currículo original em português e, por meio de uma sequência de prompts, o código realiza três etapas: 
-            (1) traduz o currículo para o inglês, 
-            (2) melhora sua redação, 
-            (3) gera uma seção de habilidades técnicas considerando essas linguagens.</p>
+        <p>O estudo da integração com grandes modelos de linguagem natural tem despertado meu interesse, pois abre portas para inúmeras aplicações práticas.</p><br>
+        <p>Nesse contexto, venho aprimorando conhecimentos fundamentais em NLP e explorando a framework Langchain, que permite a conexão com diversos recursos avançados de LLMs.</p><br>
+        <p>Durante minhas leituras e testes, aprendi sobre arquiteturas relevantes como RAG, cadeias sequenciais, roteadores e outras estruturas úteis para composição de fluxos inteligentes.</p><br>
+        <p>Na implementação abaixo, desenvolvi uma cadeia sequencial baseada em `PromptTemplate`. A lógica foi estruturada por meio de uma `RunnableSequence` composta por diversos `RunnableMap`, que se comunicam funcionalmente, transmitindo os dados entre etapas.</p><br>
+        <p>Em resumo, o código parte de um currículo em português e, através de uma sequência de prompts, executa as seguintes etapas: 
+            (1) tradução do currículo para o inglês; 
+            (2) aprimoramento da redação; 
+            (3) geração de uma seção de habilidades técnicas com base nas linguagens identificadas.</p><br>
+        <p>A aplicação foi desenvolvida em Python, utilizando o framework Flask para criação da interface e das rotas. Todo o projeto foi hospedado no site Render, e pode ser acessado através do link: <a href="https://generatecv-s3g3.onrender.com/" target="_blank">https://generatecv-s3g3.onrender.com/</a></p>
     </div>
     <form action="/process" method="post">
         <textarea id="input" placeholder="Enter your message" cols="50"></textarea>
