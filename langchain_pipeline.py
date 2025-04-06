@@ -5,7 +5,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableMap
 import os
 
-api_key = os.environ.get("OPENAI_API_KEY")  
+api_key = "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"  # Ou substitua diretamente pela chave
+
 
 llm = ChatOpenAI(model="gpt-3.5-turbo", api_key=api_key)
 
