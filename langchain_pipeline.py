@@ -1,5 +1,5 @@
 # langchain_pipeline.py
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableMap
@@ -7,7 +7,7 @@ import os
 
 api_key = os.environ.get("OPENAI_API_KEY")  
 
-llm = OpenAI(openai_api_key=api_key, temperature=0.7)
+llm = ChatOpenAI(openai_api_key=api_key, temperature=0.7)
 
 # Prompts
 step_one = ChatPromptTemplate.from_template("Translate the following resume to English:\n\n{Resume}") | llm | StrOutputParser()
