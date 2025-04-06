@@ -1,15 +1,13 @@
 Flask
 gunicorn
 
-# LangChain core components
+# LangChain e dependências compatíveis
 langchain==0.1.11
 langchain-core==0.1.33
-
-# OpenAI integration para LangChain
 langchain-openai==0.0.8
 
-# Cliente OpenAI compatível
-openai==0.28.1  # <-- Troque isso!
+# Cliente OpenAI compatível com langchain-openai
+openai==1.11.1
 
-# Outras dependências necessárias
+# Outras dependências
 tiktoken
