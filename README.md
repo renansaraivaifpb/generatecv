@@ -68,14 +68,23 @@ python app.py
 A lógica de processamento está no arquivo langchain_pipeline.py e é composta por uma cadeia sequencial de 4 etapas:
 
 Currículo em PT
+
    ↓
+   
 Tradução → step_one
+
    ↓
+   
 Melhoria → step_two
+
    ↓
+   
 Linguagens-chave → step_three
+
    ↓
+   
 Habilidades técnicas → step_four
+
 
 ---
 
