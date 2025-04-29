@@ -82,9 +82,16 @@ Habilidades técnicas → step_four
 ## Estrutura do Projeto
 
 ├── app.py                     # Servidor Flask com rotas
+
 ├── langchain_pipeline.py     # Lógica da pipeline com LangChain
+
 ├── templates/
+
 │   └── index.html            # Interface web
+
 ├── static/                   # (caso inclua arquivos estáticos)
+
 ├── .env                      # (opcional - configure OPENAI_API_KEY)
+
 └── requirements.txt          # Dependências
+
